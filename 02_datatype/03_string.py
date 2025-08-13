@@ -87,6 +87,28 @@ for char in my_string:
 # Output: H e l l o ,   W o r l d !
 print()  # New line after the loop 
 
+# Another example of string iteration in loop without end parameter
+for char in my_string:
+    print(char)  # Print each character on a new line
+# Output:
+# H
+# e
+# l
+# l
+# o
+# ,
+##  
+# W
+# o
+# r
+# l
+# d
+# !
+
+# Strings can be checked for membership using the 'in' keyword
+contains_world = "World" in my_string  # Check if "World" is in the string
+print(contains_world)  # Output: True
+
 # Strings can be checked for equality using the '==' operator
 is_equal = my_string == "Hello, World!"  # Check if the string is equal to another string
 print(is_equal)  # Output: True
@@ -127,7 +149,7 @@ print(repeated_string)  # Output: "Hello, World!Hello, World!Hello, World!"
 print(my_string.lower())  # Output: "hello, world!"
 print(my_string.upper())  # Output: "HELLO, WORLD!"
 
-#strip() method
+# strip() method
 whitespace_string = "   Hello, World!   "
 print(whitespace_string.strip())  # Output: "Hello, World!"
 
@@ -147,5 +169,23 @@ print(count_of_l)  # Output: 3 (number of times 'l' appears in the string)
 words_list = ["Hello", "World"]
 joined_string2 = " ".join(words_list)
 print(joined_string2)  # Output: "Hello World"
+
+# split() method
+split_string = my_string.split(", ")
+print(split_string)  # Output: ['Hello', 'World!']
+
+# Order formatting
+order_string = "My name is {0} and I am {1} years old.".format(name, age)
+print(order_string)  # Output: "My name is Alice and I am 30 years old."
+
+
+# Join method with a list of strings
+# Example of using join() method with a list of strings
+string_list = ["apple", "banana", "cherry"]
+# Join the list into a single string with commas
+joined_string3 = ", ".join(string_list)
+print(joined_string3)  # Output: "apple, banana, cherry"
+
+
 
 # --- IGNORE ---
