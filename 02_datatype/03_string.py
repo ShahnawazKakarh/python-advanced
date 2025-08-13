@@ -178,7 +178,6 @@ print(split_string)  # Output: ['Hello', 'World!']
 order_string = "My name is {0} and I am {1} years old.".format(name, age)
 print(order_string)  # Output: "My name is Alice and I am 30 years old."
 
-
 # Join method with a list of strings
 # Example of using join() method with a list of strings
 string_list = ["apple", "banana", "cherry"]
@@ -186,6 +185,9 @@ string_list = ["apple", "banana", "cherry"]
 joined_string3 = ", ".join(string_list)
 print(joined_string3)  # Output: "apple, banana, cherry"
 
-
+# raw strings
+# Example of a raw string to avoid escape sequences
+raw_string = r"C:\Users\Name\Documents"
+print(raw_string)  # Output: "C:\Users\Name\Documents"
 
 # --- IGNORE ---
