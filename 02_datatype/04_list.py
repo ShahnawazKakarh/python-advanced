@@ -71,6 +71,30 @@ print(my_list)  # Output: [10, 2, 3, 4, 5]
 
 # ############################################################### #
 
+tea_list = ['Green Tea', 'Black Tea', 'Herbal Tea', 'Masala Tea']  # Example of a list containing strings
+for tea in tea_list:
+    print(tea)  # Prints each type of tea in the list
+
+for tea in tea_list:
+    print(tea, end='-')
+
+if 'Green Tea' in tea_list:  # Checking if 'Green Tea' is in the list
+    print("\nGreen Tea is available!")  # Output: Green Tea is available!
+else:
+    print("\nGreen Tea is not available.") and tea_list.append('Green Tea')  # Adding 'Green Tea' to the list if not present
+
+tea_list.append('Oolong Tea')  # Appending 'Oolong Tea' to the list
+print(tea_list)  # Output: ['Green Tea', 'Black Tea', 'Herbal Tea', 'Masala Tea', 'Oolong Tea']
+
+tea_list.remove('Black Tea')  # Removing 'Black Tea' from the list
+print(tea_list)  # Output: ['Green Tea', 'Herbal Tea', 'Masala Tea', 'Oolong Tea']
+
+tea_list.pop(2)  # Popping the element at index 2 (which is 'Masala Tea')
+print(tea_list)  # Output: ['Green Tea', 'Herbal Tea', 'Oolong Tea']
+
+
+# ############################################################### #
+
 # You can also append new elements to the list using the append() method.
 my_list.append(6)  # Appending a new element
 print(my_list)  # Output: [10, 2, 3, 4, 5, 6]
