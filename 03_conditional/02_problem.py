@@ -1,23 +1,30 @@
+from datetime import datetime
+
 # Movie Ticket Pricing
 # Write a program that determines the price of a movie ticket based on the age of the customer.
-# - Child (0-12 years): $5
-# - Teenager (13-19 years): $8
-# - Adult (20-59 years): $10
-# - Senior (60 years and above): $6
+# - children (below 18): $8
+# - Adults ((18 and over)): $12
+# - Everyone gets a $2 discount on Wednesdays.
+
+# < less than, > greater than, <= less than or equal to, >= greater than or equal to
+# Note: The day of the week is represented as an integer where Monday is 0 and Sunday is 6.
 
 age = input("Enter your age: ")
+
 try:
     age = int(age)
+    today = datetime.now().weekday()
     if age < 0:
         print("Invalid age")
-    elif age <= 12:
-        print("Ticket price: $5 (Child)")
-    elif age <= 19:
-        print("Ticket price: $8 (Teenager)")
-    elif age <= 59:
-        print("Ticket price: $10 (Adult)")
+    elif age < 18 and today == 2: 
+        print("Ticket price: $6 (Children with discount)")
+    elif age < 18 and not today == 2:
+        print("Ticket price: $8 (Children)")
+    elif age >= 18 and today == 2:
+        print("Ticket price: $10 (Adults with discount)")
     else:
-        print("Ticket price: $6 (Senior)")
+        print("Ticket price: $12 (Adults)")
+
 except ValueError:
     print("Please enter a valid integer for age.")
 

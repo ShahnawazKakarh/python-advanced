@@ -7,12 +7,13 @@
 
 # Enter Age
 # If the age is less than 0, print "Invalid age".
-# If the age is between 0 and 12 (inclusive), print "Child".
-# If the age is between 13 and 19 (inclusive), print "Teenager".
-# If the age is between 20 and 59 (inclusive), print "Adult".
+# If the age is between 0 and less than 13, print "Child".
+# If the age is between 13 and 19, print "Teenager".
+# If the age is between 20 and 59, print "Adult".
 # If the age is 60 or above, print "Senior".
 # User input should be handled to ensure it is a valid integer.
 # User can input any age, and the program should categorize it accordingly.
+# < less than, > greater than, <= less than or equal to, >= greater than or equal to
 # Bonus: Handle invalid input gracefully.
 
 
@@ -21,14 +22,15 @@ try:
     age = int(age)
     if age < 0:
         print("Invalid age")
-    elif age <= 12:
+    elif age < 13:
         print("Child")
-    elif age <= 19:
+    elif age < 20:
         print("Teenager")
-    elif age <= 59:
+    elif age < 60:
         print("Adult")
     else:
         print("Senior")
+
 except ValueError:
     print("Please enter a valid integer for age.")
 
