@@ -43,4 +43,4 @@ dist/
 # Ignore Python bytecode files
 *.pyc
 *.pyo
-*.pyd 
+*.pyd
