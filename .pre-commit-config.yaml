@@ -13,7 +13,8 @@ repos:
     rev: v2.0.4
     hooks:
       - id: autopep8
-        args: [--in-place, --aggressive, --aggressive]
+        # args: [--in-place, --aggressive, --aggressive]
+        args: [--max-line-length=123]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
