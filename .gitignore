@@ -1,4 +1,6 @@
 # Ignore Python cache files
+.01_basics/__pycache__/
+.__pycache__
 __pycache__
 *.py[cod]
 *$py.class
